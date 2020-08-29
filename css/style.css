@@ -275,7 +275,7 @@ section{
 
 section span{
     position: absolute;
-    background: #fff;
+    background: #000;
     pointer-events: none;
     background-size: cover;
     animation: image_drop 6s linear forwards;
