@@ -1,0 +1,328 @@
+@import url(https://fonts.googleapis.com/css?family=Nobile:400italic,700italic);
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(13, 134, 108, 0.192);
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.card {
+  position: relative;
+  width: 500px;
+  height: 550px;
+  border: 10px solid #73bfb5;
+  margin: 25px auto 0 auto;
+  box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  background-color: #e6f0e6;
+}
+
+.card .text-container {
+  width: 80%;
+  height: 80%;
+  margin: 20px 20px;
+}
+
+.card .text-container #head {
+  font-family: "Nobile", sans-serif;
+  font-size: 1.5em;
+  margin: 60px auto 60px auto;
+}
+
+.card p {
+  font-size: 1.1em;
+  line-height: 1.4;
+  font-family: "Nobile";
+  color: #331717;
+  font-style: italic;
+  text-align: center;
+  margin: 30px auto 0px auto;
+}
+
+.card .front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: -10px 0px 0px -10px;
+  border: 10px solid #73bfb5;
+  backface-visibility: hidden;
+  background-color: #73a3bf;
+  /* background-image: url($cover-image); */
+  background-size: contain;
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  transform: perspective(1500px) rotateY(0deg);
+  transition: all 0.8s ease-in-out;
+}
+
+.flip-on-hover:hover .front {
+  transform: perspective(1500px) rotateY(-170deg);
+  background-color: #41718d;
+}
+
+.flip-on-hover:hover .back {
+  transform: perspective(1500px) rotateY(-170deg);
+  box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3),
+    inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  background-color: #d2dcd2;
+}
+#greet {
+    transform: translateX(100px);
+  transition: all 0.8s ease-in-out;
+}
+.flip-on-hover:hover #greet {
+  visibility: hidden;
+}
+
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 10px solid #73bfb5;
+  margin: -10px 0px 0px -10px;
+  backface-visibility: visible;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  transform: perspective(1500px) rotateY(0deg);
+  transition: all 0.8s ease-in-out;
+  background-color: #e6f0e6;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+.flip-on-hover{
+    transition: all 0.8s ease-in-out;
+}
+.flip-on-hover:hover{
+    transform: translate(270px, 0px);
+}
+
+.cover-shape-large {
+  position: absolute;
+  width: 65%;
+  height: 50%;
+  top: 25%;
+  left: 22%;
+}
+
+.cover-shape-large .shape-block,
+.cover-shape-large .shape-diamond {
+  background-color: #73bf8f;
+}
+
+.cover-shape-small {
+  position: absolute;
+  width: 53%;
+  height: 40%;
+  top: 30%;
+  left: 27%;
+}
+
+.shape-block {
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  background-color: #d2ebfa;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.shape-diamond {
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  transform: rotateZ(45deg);
+}
+
+/* cake animation stuff from: https://codepen.io/WithAnEs/pen/OVZRvg
+   not created by me! It's by Mark Thomes.
+*/
+#cake {
+  width: 150px;
+  margin-top: -22.4em;
+  margin-left: 3.1em;
+}
+.cake {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -125px;
+}
+
+.cake > * {
+  position: absolute;
+  /* backface-visibility: hidden; */
+}
+
+.candle img {
+  width: 30px;
+  height: 60px;
+  margin: -2.2em 0em 0em 7em;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  font-style: italic;
+  font-size: 60px;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15), 1px 1px 0 #ffc8c8,
+    2px 2px 0 #ff9696, 3px 3px 0 #ff7d7d;
+  color: #fff;
+  margin-top: 0em;
+}
+
+.polaroid {
+  z-index: 9;
+  width: 240x;
+  height: 220px;
+  position: absolute;
+  float: left;
+  background: #1e1c18;
+  border: 7px solid #f5f5f5;
+  border-bottom: 50px solid #f5f5f5;
+  -webkit-box-shadow: 0 0 6px -1px #000;
+  box-shadow: 0 0 6px -1px #000;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  margin: 8em 2em;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  clear: both;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.polaroid img,
+.polaroid .img {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-position: center;
+  background-size: cover;
+  -webkit-animation: fade-in 20s ease-in;
+  animation: fade-in 20s ease-in;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+#hbd-anim {
+  position: absolute;
+  bottom: 10px;
+  margin: auto auto auto 4.4em;
+}
+
+
+#code{
+    float:left;
+    width:445px;
+    height:auto;
+    color:#333;
+    font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";
+    font-size:14px;
+    font-weight:bolder;
+}
+#code .string{
+    color:#b9836b;
+}
+#code .argument{
+    color:#6aa9c9;
+}
+#code .keyword{
+    color:#3f6c92;
+    font-weight:bold
+}
+#code .special-keyword{
+    color:#85077e;
+    font-weight:bold
+}
+#code .function{
+    color:#a6a819;
+}
+#code .placeholder{
+    margin-left:15px;
+}
+#code .space{
+    margin-left:7px;
+}
+#code .tab{
+    margin-left:2em;
+}
+#code .comments{
+    color:#3f7f5f
+}
+
+#gift{
+    width: 150px;
+    height: 200px;
+    margin-left: 170px;
+    margin-top: -40px;
+}
+
+section{
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+section span{
+    position: absolute;
+    background: #fff;
+    pointer-events: none;
+    background-size: cover;
+    animation: image_drop 6s linear forwards;
+}
+
+@keyframes image_drop{
+    0%{
+        transform: translateY(-100%);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(400%);
+        opacity: 0;
+    }
+}
+
+@keyframes flicker {
+  0% {
+    /* transform: rotateZ(5deg); */
+    box-shadow: 0 0 10px rgba(247, 196, 102, 0.664),
+      0 0 20px rgba(247, 196, 102, 0.664), 0 0 60px rgba(247, 196, 102, 0.664),
+      0 0 80px rgba(247, 196, 102, 0.664);
+  }
+  25% {
+    /* transform: rotateZ(-5deg); */
+    box-shadow: 0 0 10px rgba(247, 193, 93, 0.808),
+      0 0 20px rgba(247, 193, 93, 0.808), 0 0 60px rgba(247, 193, 93, 0.808),
+      0 0 80px rgba(247, 193, 93, 0.808);
+  }
+  50% {
+    /* transform: rotateZ(10deg); */
+    box-shadow: 0 0 10px rgba(241, 161, 12, 0.685),
+      0 0 20px rgba(241, 161, 12, 0.685), 0 0 60px rgba(241, 161, 12, 0.685),
+      0 0 80px rgba(241, 161, 12, 0.685);
+  }
+  75% {
+    /* transform: rotateZ(-10deg); */
+    box-shadow: 0 0 10px rgba(250, 192, 83, 0.89),
+      0 0 20px rgba(250, 192, 83, 0.89), 0 0 60px rgba(250, 192, 83, 0.89),
+      0 0 80px rgba(250, 192, 83, 0.89);
+  }
+  100% {
+    /* transform: rotateZ(5deg); */
+    box-shadow: 0 0 10px rgba(255, 201, 102, 0.904),
+      0 0 20px rgba(255, 201, 102, 0.904), 0 0 60px rgba(255, 201, 102, 0.904),
+      0 0 80px rgba(255, 201, 102, 0.904);
+  }
+}
