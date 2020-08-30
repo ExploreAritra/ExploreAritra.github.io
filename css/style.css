@@ -305,6 +305,7 @@ section span{
   section{
     overflow-x: scroll;
     overflow-y: hidden;
+    background: transparent;
   }
   #code{
     font-size: small;
