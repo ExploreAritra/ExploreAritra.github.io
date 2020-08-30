@@ -299,8 +299,12 @@ section span{
   html,
   body{
     overflow: scroll;
+    min-width: 1200;
   }
   section{
     overflow: scroll;
+  }
+  #code{
+    font-size: small;
   }
 }
