@@ -225,6 +225,17 @@
     <script src="js/jquery.confetti.js"></script>
     <script src="js/type.js"></script>
     <script>
+      function checkSize() {
+        if ($(".sampleClass").css("float") == "none") {
+          $("body, html, section").css({ height: $(document).height() + "px" });
+          $(window).resize(function () {
+            $("body, html, section").css({ height: $(document).height() + "px" });
+          });
+          $("body, html, section")
+            .css("overflowX", "scroll")
+            .css("overflowY", "hidden");
+        }
+      }
       setTimeout(function () {
         $("#greet").fadeIn(1000);
       }, 4000);
@@ -239,13 +250,13 @@
         $("#code").typewriter();
         setTimeout(function () {
           $("#gift").fadeIn(1000);
-          $("#gift").css("cursor", "pointer");
         }, 70000);
       }, 7000);
       $("#gift").click(function () {
         $(".card").css("display", "none");
         $("section").fadeIn(1000);
         $("body, html").css("background-color", "#000");
+        checkSize();
       });
     </script>
 
