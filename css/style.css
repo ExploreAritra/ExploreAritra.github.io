@@ -298,13 +298,18 @@ section span{
   /* For mobile phones: */
   html,
   body{
-    overflow: scroll;
-    min-width: 1200;
+    overflow: visible;
   }
   section{
-    overflow: scroll;
+    overflow: visible;
+    background: transparent;
   }
   #code{
     font-size: small;
+  }
+  .card{
+    margin-left: 300px;
+    margin-right: 20px;
+    margin-top: 50px;
   }
 }
