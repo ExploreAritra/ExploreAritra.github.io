@@ -14,6 +14,43 @@
       name="description"
       content="May you have a wonderful birthday. Wishing you all the happiness!"
     />
+    <meta name="author" content="Aritra Choudhury" />
+    <meta name="email" content="explorearitra@gmail.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Happy Birthday Ritu!" />
+    <meta
+      property="og:description"
+      content="May you have a wonderful birthday. Wishing you all the happiness!"
+    />
+    <meta
+      property="og:image"
+      content="https://explorearitra.github.io/img/hbd.jpg"
+    />
+    <meta property="og:url" content="https://vinitshahdeo.github.io/HBD" />
+    <meta property="og:site_name" content="Happy Birthday Ritu!" />
+
+    <meta name="twitter:card" content="website" />
+    <meta name="twitter:site" content="Happy Birthday Ritu!" />
+    <meta name="twitter:title" content="Happy Birthday Ritu!" />
+    <meta
+      name="twitter:description"
+      content="May you have a wonderful birthday. Wishing you all the happiness!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://explorearitra.github.io/img/hbd.jpg"
+    />
+
+    <meta itemprop="name" content="Happy Birthday Ritu!" />
+    <meta
+      itemprop="description"
+      content="May you have a wonderful birthday. Wishing you all the happiness!"
+    />
+    <meta
+      itemprop="image"
+      content="https://explorearitra.github.io/img/hbd.jpg"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
@@ -23,12 +60,7 @@
   <body>
     <div class="card" id="startConfetti">
       <div class="back">
-        <div class="polaroid">
-          <div
-            class="img"
-            style="background-image: url('img/card-back.jpg')"
-          ></div>
-        </div>
+        <img id="polaroid" src="img/card-back.png" alt="">
       </div>
       <div class="front">
         <h1 id="greet" class="animated infinite swing" style="display: none">
@@ -227,9 +259,9 @@
     <script>
       function checkSize() {
         if ($(".sampleClass").css("float") == "none") {
-          $("body, html, section").css({ height: $(document).height() + "px" });
+          $("body, html, section").addClass("full-screen");
           $(window).resize(function () {
-            $("body, html, section").css({ height: $(document).height() + "px" });
+            $("body, html, section").addClass("full-screen");
           });
           $("body, html, section")
             .css("overflowX", "scroll")
@@ -309,9 +341,9 @@
         section.appendChild(drop);
         setTimeout(() => {
           drop.remove();
-        }, 6000);
+        }, 10000);
       }
-      setInterval(dropImage, 200);
+      setInterval(dropImage, 500);
     </script>
   </body>
 </html>
