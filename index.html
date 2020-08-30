@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> -->
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#73bfb5" />
     <link rel="stylesheet" href="css/style.css" />
+    <meta
+      name="description"
+      content="May you have a wonderful birthday. Wishing you all the happiness!"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
@@ -210,9 +220,7 @@
         <img id="gift" style="display: none" src="img/gift.gif" alt="Gift" />
       </div>
     </div>
-    <section style="display: none;">
-
-    </section>
+    <section style="display: none"></section>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery.confetti.js"></script>
     <script src="js/type.js"></script>
@@ -237,7 +245,7 @@
       $("#gift").click(function () {
         $(".card").css("display", "none");
         $("section").fadeIn(1000);
-        $("body").css("background-color", "#000");
+        $("body, html").css("background-color", "#000");
       });
     </script>
 

@@ -6,6 +6,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: rgba(13, 134, 108, 0.192);
+  background-size: cover;
   width: 100%;
   height: 100%;
   z-index: -2;
@@ -298,11 +299,12 @@ section span{
   /* For mobile phones: */
   html,
   body{
-    overflow: visible;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
   section{
-    overflow: visible;
-    background: transparent;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
   #code{
     font-size: small;
