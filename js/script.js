@@ -97,6 +97,9 @@ setTimeout(function () {
   $(".candle").fadeIn(1000);
   $("#hbd-anim").fadeIn(1000);
   document.getElementById("hbd-song").play();
+  $("#polaroid").click(function(){
+    document.getElementById("hbd-song").play();
+  });
 }, 5000);
 setTimeout(function () {
   $(".card").addClass("flip-on-hover");
