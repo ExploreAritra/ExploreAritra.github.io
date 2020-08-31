@@ -66,7 +66,7 @@ let images = [
 
 	let bg = images[Math.floor(Math.random() * images.length)];
 
-	let size = Math.random() * 200 + 50;
+	let size = (Math.random() * 250) + 50;
 	drop.style.width = size + "px";
 	drop.style.height = size + "px";
 	drop.style.backgroundImage = bg;
@@ -105,8 +105,13 @@ function checkSize() {
 	}, 70000);
   }, 7000);
   $("#gift").click(function () {
-	$(".card").css("display", "none");
-	$("section").fadeIn(1000);
+	  $(".card").removeAttr("id");
+	$(".card").fadeOut(1000);
+	setTimeout(function(){
+		$(".card").remove();
+		$("section").attr("id", "startConfetti");
+	},4000);
+	$("section").fadeIn(2000);
 	$("body, html").css("background-color", "#000");
 	checkSize();
   });
