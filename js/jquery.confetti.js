@@ -69,7 +69,7 @@
 
     }
 
-    // $(document).ready(init());
+    $(document).ready(init());
 
     function InitializeButton() {
         $('#startConfetti').hover(RestartConfetti,DeactivateConfetti);
