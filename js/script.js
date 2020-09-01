@@ -64,7 +64,7 @@ let images = [
 function dropImage() {
   let section = document.querySelector("section");
   let drop = document.createElement("span");
-  drop.style.left = Math.random() * innerWidth + "px";
+  drop.style.left = (Math.random() * innerWidth - 100) + "px";
 
   let bg = images[Math.floor(Math.random() * images.length)];
 
@@ -110,7 +110,8 @@ setTimeout(function () {
   }, 70000);
 }, 7000);
 $("#gift").click(function () {
-	$("body, html").css("background-color", "rgb(0,0,0)");
+	$("html").css("background-color", "rgb(0,0,0)");
+	$("body").css("background-color", "transparent");
   $(".card").remove();
   $("section").fadeIn(1000);
   checkSize();

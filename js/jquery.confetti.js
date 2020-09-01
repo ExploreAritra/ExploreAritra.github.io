@@ -78,11 +78,11 @@
     }
 
     function SetGlobals() {
-        $('body').append('<canvas id="confettiCanvas" style="position:absolute;top:0;left:0;display:none;z-index:-1;"></canvas>');
+        $('html').append('<canvas id="confettiCanvas" style="position:absolute;top:0;left:0;display:none;z-index:-6;"></canvas>');
         canvas = document.getElementById("confettiCanvas");
         ctx = canvas.getContext("2d");
-        W = window.innerWidth;
-        H = window.innerHeight;
+        W = window.outerWidth;
+        H = window.outerHeight;
         canvas.width = W;
         canvas.height = H;
     }

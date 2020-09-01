@@ -2,7 +2,6 @@
 html,
 body {
   position: relative;
-  overflow: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,7 +9,14 @@ body {
   background-size: cover;
   width: 100%;
   height: 100%;
-  z-index: -50;
+  overflow: hidden;
+}
+html{
+  z-index: -10;
+}
+
+body{
+  z-index: -5;
 }
 
 .card {
@@ -275,7 +281,7 @@ h1 {
   width: 100px;
   height: 150px;
   margin-left: 175px;
-  margin-top: -20px;
+  margin-top: 0px;
   cursor: pointer;
   outline: none;
 }
@@ -298,6 +304,7 @@ section span {
   pointer-events: none;
   background-size: cover;
   animation: image_drop 10s linear forwards;
+  z-index: 99;
 }
 
 @keyframes image_drop {
@@ -323,19 +330,30 @@ section span {
 
 @media only screen and (max-width: 1100px) {
   /* For mobile phones: */
-  html,
-  body {
+  html{
+    position: relative;
+    height: 650px;
+    overflow: hidden;
+  }
+  body{
+    position: relative;
     overflow: scroll;
   }
   section {
+    position: relative;
+    height: 650px;
     background: transparent;
+    z-index: 99;
   }
   #code {
     font-size: small;
   }
+  .container{
+    width: 1100px;
+  }
   .card {
     margin-left: 300px;
-    margin-right: 350px;
+    margin-right: 300px;
     margin-top: 40px;
     margin-bottom: 40px;
   }
